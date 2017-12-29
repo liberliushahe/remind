@@ -1,0 +1,21 @@
+﻿{
+  // 这个字段将用在安装对话框，扩展管理界面，和store里面，弹出通知的标题
+  "name": "桌面助手",
+  // 扩展的版本用一个到4个数字来表示，中间用点隔开,必须在0到65535之间，非零数字不能0开头
+  "version": "1",
+  // 描述扩种的一段字符串（不能是html或者其他格式，不能超过132个字符）。这个描述必须对浏览器扩展的管理界面和Chrome Web Store都合适。
+  "description": "桌面提醒插件",
+  // 一个或者多个图标来表示扩展，app，和皮肤
+  "icons": {
+      "16":"images/32.png",
+      "128": "images/128.png"  // 在webstore安装的时候使用
+  },
+  // 扩展或app将使用的一组权限
+  "permissions": ["tabs", "notifications"],
+  // Manifest V2 用background属性取代了background_page
+  // 这里指定了一个Javascript脚本
+  "background": { "scripts": ["background.js"] },
+  // Manifest version 1在Chrome18中已经被弃用了，这里应该指定为2
+  "manifest_version": 2
+
+}
